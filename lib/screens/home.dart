@@ -124,13 +124,19 @@ class _HomeState extends State<Home> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  requiredData != null
-                                      ? "${requiredData[index]["title"]}"
-                                      : "Title",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
+                                SizedBox(
+                                  width: 150,
+                                  child: Text(
+                                    requiredData != null
+                                        ? "${requiredData[index]["title"]}"
+                                        : "Title",
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    softWrap: false,
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
